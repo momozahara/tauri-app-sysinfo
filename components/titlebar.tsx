@@ -10,6 +10,20 @@ export default function TitleBar({ children }: Props) {
 
   useEffect(() => {
     window.addEventListener("keydown", async (event) => {
+      const preventEvent = ["F3", "F7"];
+      const preventEventWithControl = ["KeyF", "KeyG"];
+
+      preventEvent.map((item) => {
+        if (event.code === item) {
+          event.preventDefault();
+        }
+      });
+      preventEventWithControl.map((item) => {
+        if (event.code === item && event.ctrlKey) {
+          event.preventDefault();
+        }
+      });
+
       switch (event.code) {
         case "Escape": {
           await appWindow.close();
