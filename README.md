@@ -8,4 +8,4 @@ This template should help get you started developing with Tauri, Next.js and Typ
 
 ## Temporary Acceleration
 While waiting for microsoft.
-- [/components/titlebar.tsx](/components/titlebar.tsx)
+- [/components/titlebar.tsx](/components/titlebar.tsx#L12)
