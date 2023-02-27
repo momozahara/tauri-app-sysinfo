@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleAttributePerLine": true
+      }
+    ],
+    "curly": "error",
+    "camelcase": "error",
+    "eqeqeq": "error",
+    "no-undef": "off",
+    "no-unused-vars": "warn",
+    "no-useless-escape": "off",
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": "always",
+        "ObjectPattern": { "multiline": true }
+      }
+    ]
+  },
+  "ignorePatterns": [
+    "src-tauri",
+    "*.config.js"
+  ]
+}

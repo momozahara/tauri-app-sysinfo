@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --titlebar-height: 32px;
+  --titlebar-btn-width: 40px;
+}
+
+@layer components {
+  html,
+  body {
+    @apply p-0 m-0;
+    @apply bg-neutral-800 text-neutral-50;
+  }
+
+  .titlebar {
+    @apply fixed;
+    @apply top-0 left-0 right-0;
+    @apply h-[var(--titlebar-height)];
+    @apply bg-neutral-700 text-neutral-400;
+    @apply select-none;
+  }
+
+  .titlebar .titlebar-btn {
+    @apply float-right;
+    @apply inline-flex;
+    @apply justify-center items-center;
+    @apply h-[var(--titlebar-height)] w-[var(--titlebar-btn-width)];
+    @apply hover:bg-neutral-600;
+  }
+
+  .titlebar-btn.close-btn {
+    @apply hover:bg-red-600 hover:text-neutral-50;
+  }
+
+  .titlebar .titlebar-status {
+    @apply absolute;
+    @apply inline-flex;
+    @apply justify-center items-center;
+    @apply h-[var(--titlebar-height)];
+    @apply left-[50%] translate-x-[-50%];
+    @apply select-none;
+  }
+}
